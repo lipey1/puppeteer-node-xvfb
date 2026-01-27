@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:20.9.0
 
 # Instala dependências
 RUN apt-get update && apt-get install -y \
