@@ -7,7 +7,8 @@ cd /home/container
 export INTERNAL_IP=$(ip route get 1 | awk '{print $NF;exit}')
 
 # Mostra versão do Node para debug
-node -v
+echo "NODE VERSION:"
+node -v || echo "node not found"
 
 # STARTUP vem do Pterodactyl (template + COMMAND da egg)
 MODIFIED_STARTUP=$(echo -e "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g')
